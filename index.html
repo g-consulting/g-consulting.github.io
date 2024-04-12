@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>
-      Gurney Consulting LLC
-    </title>
-    <meta name="description" content="Simple landind page" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" >
+    <title>Gurney Consulting LLC</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet" >
     <style>
       .gradient {
         background: linear-gradient(90deg, #cae4a5 0%, #6066f3 100%);
       }
     </style>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
   </head>
   <body class="leading-normal tracking-normal text-white gradient" style="font-family: 'Source Sans Pro', sans-serif;">
-    <!--Nav-->
     <nav id="header" class="fixed w-full z-30 top-0 text-white">
       <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div class="pl-4 flex items-center">
@@ -32,7 +30,7 @@
           <button id="nav-toggle" class="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
             <svg class="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Menu</title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" ></path>
             </svg>
           </button>
         </div>
@@ -51,12 +49,10 @@
         </a>
         </div>
       </div>
-      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" />
+      <hr class="border-b border-gray-100 opacity-25 my-0 py-0" >
     </nav>
-    <!--Hero-->
     <div class="pt-24">
       <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <!--Left Col-->
         <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
           <p class="uppercase tracking-loose w-full">Gurney Consulting LLC</p>
           <h1 class="my-4 text-5xl font-bold leading-tight">
@@ -66,9 +62,8 @@
             Gurney Consulting LLC specializes in crafting bespoke corporate communication strategies that enhance brand presence and foster meaningful engagement. 
           </p>
         </div>
-        <!--Right Col-->
         <div class="w-full md:w-3/5 py-6 text-center">
-          <img class="w-full md:w-4/5 z-50" src="hero.svg" />
+          <img class="w-full md:w-4/5 z-50" src="hero.svg" alt="hero image">
         </div>
       </div>
     </div>
@@ -156,14 +151,10 @@
       <div class="w-full mb-4">
         <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
       </div>
-      <h3 class="my-4 text-3xl leading-tight">
-        
-      </h3>
       <a href="mailto:info@gurneyconsulting.com" class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
         Email
       </a>
     </section>
-    <!--Footer-->
     <footer class="bg-white">
       <div class="container mx-auto px-8">
         <div class="w-full flex flex-col md:flex-row py-6">
@@ -189,7 +180,6 @@
       var toToggle = document.querySelectorAll(".toggleColour");
 
       document.addEventListener("scroll", function () {
-        /*Apply classes for slide in bar*/
         scrollpos = window.scrollY;
 
         if (scrollpos > 10) {
@@ -198,7 +188,6 @@
           navaction.classList.add("gradient");
           navaction.classList.remove("text-gray-800");
           navaction.classList.add("text-white");
-          //Use to switch toggleColour colours
           for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.add("text-gray-800");
             toToggle[i].classList.remove("text-white");
@@ -212,7 +201,6 @@
           navaction.classList.add("bg-white");
           navaction.classList.remove("text-white");
           navaction.classList.add("text-gray-800");
-          //Use to switch toggleColour colours
           for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.add("text-white");
             toToggle[i].classList.remove("text-gray-800");
@@ -225,8 +213,6 @@
       });
     </script>
     <script>
-      /*Toggle dropdown list*/
-      /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
       var navMenuDiv = document.getElementById("nav-content");
       var navMenu = document.getElementById("nav-toggle");
@@ -235,18 +221,14 @@
       function check(e) {
         var target = (e && e.target) || (event && event.srcElement);
 
-        //Nav Menu
         if (!checkParent(target, navMenuDiv)) {
-          // click NOT on the menu
           if (checkParent(target, navMenu)) {
-            // click on the link
             if (navMenuDiv.classList.contains("hidden")) {
               navMenuDiv.classList.remove("hidden");
             } else {
               navMenuDiv.classList.add("hidden");
             }
           } else {
-            // click both outside link and outside menu, hide menu
             navMenuDiv.classList.add("hidden");
           }
         }
